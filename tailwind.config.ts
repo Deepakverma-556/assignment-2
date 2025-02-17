@@ -16,6 +16,7 @@ export default {
         lightPurple: "#df2bff",
         lightSky: "#00b7ff",
         sky: "00ddff",
+        lightGray:"#343434"
       },
       fontFamily: {
         poppins: ["Poppins", "serif"],
