@@ -20,7 +20,7 @@ const CustomInput = ({
       onChange={customOnChange}
       value={myValue}
       placeholder={customPlaceholder}
-      className={`${myClass}`}
+      className={`${myClass} outline-none border border-black rounded-lg px-3 py-1 w-full`}
     />
   );
 };

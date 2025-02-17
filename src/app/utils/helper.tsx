@@ -41,3 +41,11 @@ export const SLIDER_LIST = [
     imageAlt: "laptop",
   },
 ];
+
+export const TABLE_HEADING_LIST = [
+  "First Name",
+  "Email",
+  "Phone",
+    "Password",
+  "Remove"
+];
