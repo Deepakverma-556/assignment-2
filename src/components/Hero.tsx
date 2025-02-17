@@ -3,28 +3,22 @@ import { SLIDER_ICONS_LIST, SLIDER_LIST } from '@/app/utils/helper';
 import gsap from 'gsap';
 import Image from 'next/image';
 import React, { useEffect } from 'react'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
 
 const Hero = () => {
   useEffect(() => {
-    const tl = gsap.timeline({
+    gsap.to(".my-slider", {
+      xPercent: -26 * (SLIDER_LIST.length - 1),
+      ease: "none",
       scrollTrigger: {
-        trigger: ".slider-section",
-        start: "top top",
-        end: "200%",
-        scrub: 1,
+        trigger: ".my-slider",
         pin: true,
-        markers:true,
+        scrub: 1,
+        end: "3000",
       },
     });
-    tl.fromTo(
-      ".slider-item",
-      {
-        x: "0%",
-      },
-      {
-        x: "0%",
-      },
-    );
   }, []);
 
   return (
@@ -49,7 +43,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="border border-lightGray mt-3"></div>
-      <div className="flex w-max slider-item left-0">
+      <div className="flex w-max my-slider left-0">
         {SLIDER_LIST.map((item, i) => (
           <div key={i} className="min-w-[1440px]">
             <div className="flex gap-[65px] items-center container max-w-[1140px] mx-auto">
