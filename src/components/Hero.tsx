@@ -62,7 +62,7 @@ const Hero = () => {
               </div>
               <Image
                 src={item.image}
-                alt="slider"
+                alt={item.imageAlt}
                 width={614}
                 height={417}
                 className="shadow-[0px_4px_58.7px_0px_#00DDFF26] pointer-events-none rounded-xl h-[417px] max-lg:max-w-[614px] max-lg:max-h-[417px]"
