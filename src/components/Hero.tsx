@@ -2,7 +2,9 @@ import React from 'react'
 
 const Hero = () => {
   return (
-    <div>Hero</div>
+      <div className='bg-black pt-[156px] pb-28'>
+          
+    </div>
   )
 }
 

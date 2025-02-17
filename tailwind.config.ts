@@ -8,7 +8,15 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {},
+      screens: {
+        lg: "1025px",
+        md: "770px",
+      },
+      colors: {
+        lightPurple: "#df2bff",
+        lightSky: "#00b7ff",
+        sky: "00ddff",
+      },
       fontFamily: {
         poppins: ["Poppins", "serif"],
       },
