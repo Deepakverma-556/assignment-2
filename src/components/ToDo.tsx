@@ -144,7 +144,7 @@ const ToDo = () => {
         </button>
       </form>
       <div className="flex overflow-x-auto w-full">
-        <table className="border border-black min-w-[700px] w-full mt-6">
+        <table className="border border-black mx-auto max-w-[700px] max-lg:min-w-[700px] w-full mt-6">
           <thead>
             <tr className="text-left">
               {TABLE_HEADING_LIST.map((obj, i) => (
@@ -166,7 +166,12 @@ const ToDo = () => {
                   {item.password}
                 </td>
                 <td className="border border-black py-1 px-2">
-                  <button className="text-red-500" onClick={() => deleteHandler(index)}>Delete</button>
+                  <button
+                    className="text-red-500"
+                    onClick={() => deleteHandler(index)}
+                  >
+                    Delete
+                  </button>
                 </td>
               </tr>
             ))}

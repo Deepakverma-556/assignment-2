@@ -12,7 +12,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="flex items-center gap-5">
+    <div className="flex items-center gap-5 justify-center">
       <button
         className="border border-black px-3 rounded-3xl"
         onClick={() => navigateToPage("question-one")}
