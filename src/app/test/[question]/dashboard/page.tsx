@@ -1,7 +1,11 @@
 "use client";
-import { useRouter } from "next/navigation";
+import QuestionOne from "@/components/QuestionOne";
+import QuestionTwo from "@/components/QuestionTwo";
+import { useParams, useRouter } from "next/navigation";
 
-const CustomButton = () => {
+const Dashboard = () => {
+  const params = useParams();
+  const { question } = params;
   const router = useRouter();
   const navigateToPage = (question: string) => {
     router.push(`/test/${question}/dashboard`);
@@ -21,8 +25,10 @@ const CustomButton = () => {
       >
         question two
       </button>
+      {question === "question-one" && <QuestionOne />}
+      {question === "question-two" && <QuestionTwo />}
     </div>
   );
 };
 
-export default CustomButton;
+export default Dashboard;
