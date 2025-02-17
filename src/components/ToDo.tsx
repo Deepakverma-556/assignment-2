@@ -17,11 +17,22 @@ const ToDo = () => {
   const [error, setError] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [emailError, setEmailError] = useState(false);
   const emailRegax = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
 
   function submitHandler(e: any) {
     e.preventDefault();
     setError(true);
+    setEmailError(false);
+
+    const emailExists = myArray.some(
+      (item: any) => item.email === formValue.email
+    );
+
+    if (emailExists) {
+      setEmailError(true);
+      return;
+    }
     if (
       formValue.firstName != "" &&
       formValue.email.length > 0 &&
@@ -141,7 +152,8 @@ const ToDo = () => {
           className="px-3 border border-black rounded-lg"
         >
           Submit
-        </button>
+              </button>
+              {emailError && <p className="text-red-500">Email already use</p>}
       </form>
       <div className="flex overflow-x-auto w-full">
         <table className="border border-black mx-auto max-w-[700px] max-lg:min-w-[700px] w-full mt-6">
