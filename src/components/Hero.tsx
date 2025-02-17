@@ -6,7 +6,6 @@ import React, { useEffect } from 'react'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-
 const Hero = () => {
   useEffect(() => {
     gsap.to(".my-slider", {
