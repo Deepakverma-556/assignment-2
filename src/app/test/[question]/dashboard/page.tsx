@@ -12,7 +12,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="flex flex-col pt-5 bg-black">
+    <div className="flex flex-col pt-5 bg-black min-h-screen pb-20">
       <div className="flex gap-5 mx-auto">
         <button
           className="border border-white px-3 text-white rounded-3xl"
