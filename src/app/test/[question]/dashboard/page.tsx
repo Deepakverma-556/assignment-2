@@ -12,16 +12,16 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="flex flex-col items-center gap-5 pt-5 justify-center overflow-hidden">
-      <div className="flex gap-5">
+    <div className="flex flex-col pt-5 bg-black">
+      <div className="flex gap-5 mx-auto">
         <button
-          className="border border-black px-3 rounded-3xl"
+          className="border border-white px-3 text-white rounded-3xl"
           onClick={() => navigateToPage("question-one")}
         >
           question one
         </button>
         <button
-          className="border border-black px-3 rounded-3xl"
+          className="border border-white px-3 text-white rounded-3xl"
           onClick={() => navigateToPage("question-two")}
         >
           question two
