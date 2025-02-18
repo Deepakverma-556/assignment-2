@@ -9,13 +9,13 @@ gsap.registerPlugin(ScrollTrigger);
 const Hero = () => {
   useEffect(() => {
     gsap.to(".my-slider", {
-      xPercent: -26 * (SLIDER_LIST.length - 1),
+      xPercent: -12.9 * (SLIDER_LIST.length -1),
       ease: "none",
       scrollTrigger: {
         trigger: ".my-slider",
         pin: true,
         scrub: 1,
-        end: "3000",
+        end: "2000",
       },
     });
   }, []);

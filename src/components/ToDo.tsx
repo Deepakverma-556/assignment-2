@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { FormEvent, useState } from "react";
 import CustomInput from "./common/CustomInput";
 import { TABLE_HEADING_LIST } from "@/app/utils/helper";
 
