@@ -12,7 +12,6 @@ const Hero = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#hero",
-        markers: true,
         start: "30% top",
         end: "400% center",
         pin: true,
